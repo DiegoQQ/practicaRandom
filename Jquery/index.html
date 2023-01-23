@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        li{
+            margin: 10px;
+        }
+        #container{
+            padding: 30px;
+            background-color: yellow;
+        }
+        .clase1{
+            background-color: blueviolet;
+        }
+        .clase2{
+            background-color: brown;
+        }
+        .nuevaClase{
+            color: blue;
+            background-color: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {//si se a terminado de cargar el DOM ejecutar lo siguiente
+            $('#container').html('hola');//modifica el contenido html
+            $('.clase1, .clase2').text('elementos <strong>Texto en negrita</strong>');//solo texto, no reconoce etiketas
+            $('.clase1').html('este si lo permite <strong>Texto en negrita</strong>');//si reconoce etiketas
+
+            $('#listado>li').addClass('nuevaClase');//le asigna esta clase a todos los elementos li
+        });
+    </script>
+</head>
+<body>
+    
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti et error perferendis qui laborum distinctio quae, eos nobis maxime earum veniam non, similique cupiditate illo sed adipisci provident facilis voluptates!</p>
+    </div>
+    <ul id="listado">
+        <li class="clase1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur ipsam assumenda illo similique ad nostrum error dicta dolor doloremque ut iusto eligendi quis possimus, molestiae nisi id suscipit velit. Inventore!</li>
+        <li class="clase1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur ipsam assumenda illo similique ad nostrum error dicta dolor doloremque ut iusto eligendi quis possimus, molestiae nisi id suscipit velit. Inventore!</li>
+        <li class="clase1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur ipsam assumenda illo similique ad nostrum error dicta dolor doloremque ut iusto eligendi quis possimus, molestiae nisi id suscipit velit. Inventore!</li>
+        <li class="clase1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur ipsam assumenda illo similique ad nostrum error dicta dolor doloremque ut iusto eligendi quis possimus, molestiae nisi id suscipit velit. Inventore!</li>
+        
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+        </ul>
+        
+        <li class="clase2">Lorem ipsum dolor sit amet</li>
+        <li class="clase2">Lorem ipsum dolor sit amet</li>
+    </ul>
+    
+</body>
+</html>

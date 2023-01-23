@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM javascript</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo de DOM en javascript</h1>
+    <br>
+    <form id="formulario">
+        Nombre : <input type="text" id="nombre">
+        Apellido : <input type="text" id="apellido">
+    </form>
+    <script>
+        const formulario = document.getElementById('formulario');
+
+        formulario.addEventListener('focus', (cambiar) => {
+            cambiar.target.style.background = 'rgb(227, 223, 139)';
+        }, true);//el true permite propagar a los elementos mas internos
+        formulario.addEventListener('blur', (regresar) => {
+            regresar.target.style.background = '';
+        }, true);
+    </script>
+</body>
+</html>
